@@ -1,0 +1,286 @@
+body {
+    background-image: url("pics/background.webp");
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: cover;
+    margin-top: 30px;
+}
+
+#jatek-felulet {
+    display: flex;
+    justify-content: center;
+}
+
+#panel h2{
+    display: flex;
+    justify-content: center;
+}
+
+#panel {
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.503);
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+
+
+#asztal-lapok, #mehet-div, #zseton-div, #egyenleg-div, #tet-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+#zseton-1, #zseton-5, #zseton-10, #zseton-25, #zseton-100 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 47px;
+    position: relative;
+    color: gold;
+}
+
+#zseton-1::before, #zseton-5::before, #zseton-10::before, #zseton-25::before, #zseton-100::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    border: 3px dashed #ffffff;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+#zseton-1::before {
+    border: 3px dashed #000000;
+}
+
+#zseton-1 {
+    background-color: white;
+}
+#zseton-5 {
+    background-color: red;
+}
+#zseton-10 {
+    background-color: #061974;
+}
+#zseton-25 {
+    background-color: green;
+}
+#zseton-100 {
+    background-color: black;
+}
+
+#card1, #card2, #card3, #card4, #card5 {
+    background-image: url(kartyak/background.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 202px;
+    width: 144.5px;
+    margin: 20px;
+    border-radius: 10px;
+    perspective: 1000px;
+}
+
+#myCard1, #myCard2, #enemyCard1-1, #enemyCard1-2, #enemyCard2-1, #enemyCard2-2 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 161px;
+    width: 115px;
+    border-radius: 10px;
+    position: relative;
+    margin-left: -40px;
+}
+
+#enemyCard2-1{
+    margin-left: 100px;
+}
+
+#myCard1{
+    margin-left: 100px;
+}
+
+#myCard1, #enemyCard1-1, #enemyCard2-1{
+    transform: rotate(-15deg);
+}
+
+#myCard2, #enemyCard1-2, #enemyCard2-2 {
+    transform: rotate(15deg);
+}
+
+#sajat-lapok {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;  
+}
+
+#mehet, #passz, #emel, #dob{
+    font-size: 20px;
+    margin: 0px 10px 50px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+#sajat-osszeg{
+    font-size: 20px;
+    height: 23px;
+    width: 100px;
+}
+
+#card1.flip, #card2.flip, #card3.flip, #card4.flip, #card5.flip {
+    transform: rotateY(180deg);
+    transition: transform 0.6s;
+}
+
+h1 {
+    text-align: center;
+    font-family: PokerFont;
+    font-size: 100px;
+    color: white;
+    margin: 0px;
+}
+
+#asztal {
+    background-image: url(pics/texture.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100px;
+    border-color: black;
+    border: 10px;
+    border-style:solid;
+    width: 60%;
+    
+}
+
+#egyenleg, #tet, #ellenfel_1_egyenleg, #ellenfel_2_egyenleg {
+    font-size: 20px;
+    padding: 5px;
+    font-family: 'Money';
+}
+
+#ellenfel_1_egyenleg, #egyenleg {
+    margin-right: 100px;
+}
+
+#egyenleg-div {
+    display: flex;
+  }
+  
+#egyenleg-div p {
+display: flex;
+align-items: center;
+}
+
+#tokens{
+    width: 70px;
+    height: auto;
+}
+
+#tet-div {
+    display: flex;
+  }
+  
+#tet-div p {
+display: flex;
+align-items: center;
+}
+
+#zseton-halom {
+    width: 100px;
+}
+
+#startGame {
+    color: red;
+    font-family: PokerFont;
+    font-size: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    text-align: center;
+    width: 100%;
+}
+
+#startGame:hover {
+    color: white;
+}
+
+#eredmeny, #info, #ellenfel1info, #ellenfel2info, #szoveg{
+    font-size: 20px;
+    color: white;
+    margin: 10px;
+}
+
+#dealerLady {
+    bottom: 0px;
+    width: 100%;
+    border-radius: 30px;
+}
+
+#zseton1, #zseton2, #zseton3 {
+    width: 70px;
+    height: 70px;
+}
+
+#zsetonHalom {
+    width: 100px;
+    height: 100px;
+}
+
+#moving-copy {
+    position: absolute;
+    width: 50px;
+    height: auto;
+    transition: all 1s ease-in-out;
+    pointer-events: none;
+}
+
+html, body {
+    min-width: 1450px;
+    min-height: 920px; 
+    width: 100%;
+    height: 100%; 
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#szabaly {
+    font-size: 30px;
+    color: gold;
+    font-style:normal;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    background-color: #000000;
+}
+
+  
+
+@font-face {
+    font-family: 'PokerFont';
+    src: url('font/Poker.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Money';
+    src: url('font/Moneywise.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
