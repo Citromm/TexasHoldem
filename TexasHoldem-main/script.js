@@ -28,7 +28,7 @@ const kartyak = [
 
 // Szükséges változók
 let kartyaNevek = [];
-let egyenleg = 1000
+let egyenleg = chips
 let ellenfel_1_egyenleg = 1000
 let ellenfel_2_egyenleg = 1000
 let tet = 0;
@@ -621,6 +621,7 @@ function ujJatek() {
     ellenfelVissza();
     sajatLapokOsztas();
     updateChips(egyenleg);
+    getChips()
 }
 
 
@@ -858,6 +859,6 @@ function updateChips(newChips) {
         .catch(error => console.error('Error updating chips:', error));
 }
 
-setInterval(getChips, 1000);
+
 
 
